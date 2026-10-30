@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Consumption &amp; Market Trends Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- header & navigation menu -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">⚡ Energy Analytics Dashboard</a>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Overview</a></li>
+          <li><a href="#scatter-section">Scatter</a></li>
+          <li><a href="#donut-section">Donut</a></li>
+          <li><a href="#bar-section">Bar</a></li>
+          <li><a href="#line-section">Line</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content wrapper -->
+    <main>
+      <h1>Appliance Energy &amp; Power Market Dashboard</h1>
+      <p class="intro-text">
+        Explore interactive D3 visualizations analyzing television energy efficiency, screen technology comparisons across all sizes and 55-inch models, and historical wholesale spot power prices from 1998 to 2024.
+      </p>
+
+      <!-- dashboard grid layout -->
+      <div class="dashboard-grid">
+
+        <!-- chart 1: scatter plot -->
+        <section class="card" id="scatter-section">
+          <h2>Energy vs. Star Rating</h2>
+          <p>Correlation between star ratings and total energy consumption for television models.</p>
+          <div class="responsive-svg-container" id="scatter-container"></div>
+        </section>
+
+        <!-- chart 2: donut chart -->
+        <section class="card" id="donut-section">
+          <h2>Technology Energy Share (All Sizes)</h2>
+          <p>Proportional average energy consumption across screen technologies for all TVs.</p>
+          <div class="responsive-svg-container" id="donut-container"></div>
+        </section>
+
+        <!-- chart 3: bar chart -->
+        <section class="card" id="bar-section">
+          <h2>55-Inch Tech Comparison</h2>
+          <p>Average energy consumption by screen technology strictly for 55-inch models.</p>
+          <div class="responsive-svg-container" id="bar-container"></div>
+        </section>
+
+        <!-- chart 4: line chart -->
+        <section class="card" id="line-section">
+          <h2>Historical Spot Power Prices</h2>
+          <p>Tracking wholesale regional spot power prices from 1998 to 2024.</p>
+          <div class="responsive-svg-container" id="line-container"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2026 Appliance Energy Project | Built with D3.js v7</p>
+    </footer>
+
+    <!-- load d3 library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- modular chart scripts -->
+    <script src="js/scatter-plot.js"></script>
+    <script src="js/donut-chart.js"></script>
+    <script src="js/tech-bar-chart.js"></script>
+    <script src="js/line-chart.js"></script>
+</body>
+</html>
